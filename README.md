@@ -14,8 +14,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to install on your local machine 
 - a virtual environment of **Python 3.6.x** via virtual_env or pipenv (there is some issues with conda in the deployment stage at the moment)
-- [**PostgreSQL**](http://www.postgresqltutorial.com/install-postgresql/)
-- [**Postman**](https://www.getpostman.com/downloads/), remember to save value of `Database Port`(5432 by default), `Database Superuser`(postgres by default), and `Password` when you first install it
+- [**PostgreSQL**](http://www.postgresqltutorial.com/install-postgresql/), remember to save value of `Database Port`(5432 by default), `Database Superuser`(postgres by default), and `Password` when you first install it
+- [**Postman**](https://www.getpostman.com/downloads/)
 - and the following packages:
 ```sh
 pip install psycopg2
@@ -94,7 +94,7 @@ Copy the access token to header, we now can retrieve information from the databa
             "name": "Abraham Lincoln",
             "updated_at": "2019-04-18 18:58:29 +0800"
         },
-    ...
+    ......
     ],
     "status_code": 200
 }
@@ -116,7 +116,7 @@ Here are what you need to prepare:
 - Create a `credentials` and `config` file as instructed [here](http://polyglot.ninja/deploying-flask-based-rest-api-aws-lambda-serverless-using-zappa/).
 - Prepare AWS IAM User, Role, and Policies for Zappa, following all steps in [here](https://www.codingforentrepreneurs.com/blog/aws-iam-user-role-policies-zappa-serverless-python). Save information of created `ZappaUser`, i.e. `Access key ID` and `Secret access key`.
 - Go to AWS Lightsail, create an instance of **Ubuntu 16.04 LTS** with the cheapest plan(first month for free). Once done, connect to it.
-- You now need to setup a virtual environment (Python 3.6), install PostgreSQL, and all required package before deploying the service. In the terminal, type in following lines:
+- You now need to setup a virtual environment (Python 3.6), install PostgreSQL, and all required package before deploying the service. In the terminal, type in the following lines:
 ```sh 
 sudo add-apt-repository ppa:jonathonf/python-3.6
 sudo apt-get update
@@ -142,7 +142,7 @@ pip install awscli
 pip install zappa
 ```
 - Remember `credentials` and `config` files? Now save them to `~/.aws` directory in the server. It is hidden under `ls` command but you can `cd` to it. 
-- Enter `Access key ID` and `Secret access key` on the terminal:
+- Enter `Access key ID` and `Secret access key` to the terminal:
 ```sh
 aws configure
 AWS Access Key ID [****************GVEA]: <YOUR_AWS_ACCESS_KEY>
